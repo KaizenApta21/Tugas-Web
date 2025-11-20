@@ -1,0 +1,271 @@
+/* ================================
+   HEADER (Travel Modern)
+===================================*/
+
+.Headerbg {
+    background: linear-gradient(90deg, #0062ff, #33a1ff);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    font-family: "Georgia", serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff !important;
+    margin-left: 20px;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    display: inline-block;
+    margin-right: 10px;
+    scale: 250%;
+}
+
+/* Nav menu */
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 18px;
+    /* Ukuran menu diperbesar */
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FFDDAA !important;
+    transform: scale(1.05);
+}
+
+
+/* ================================
+   CAROUSEL (Travel Modern)
+===================================*/
+
+
+
+/* Bikin carousel full lebar dan tinggi lebih dramatis */
+.carousel-item img {
+    height: 600px;
+    object-fit: cover;
+}
+
+/* Judul slide */
+.carousel-caption h5 {
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Subjudul */
+.carousel-caption p {
+    font-size: 18px;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Tombol next/prev lebih elegan */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+#Serviceclass {
+    background: linear-gradient(to bottom, #e6f3ff, #ffffff);
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#Serviceclass h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#Serviceclass p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.Oit {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.guide1 {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* === Heading Style Global === */
+h1,
+h2 {
+    color: #0f2c5c;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* ================================
+   ABOUT
+===================================*/
+
+#about {
+    background: linear-gradient(to bottom, #ffffff, #f9fbff);
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.AboutSection {
+    background: #f8f9ff;
+}
+
+.AboutTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #1b2c58;
+    margin-bottom: 20px;
+}
+
+.AboutDesc {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #4d4d56;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.AboutList {
+    list-style: none;
+    padding-left: 18px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.AboutList li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #2b3c6b;
+}
+
+.section-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* ================================
+  CONTACT
+===================================*/
+
+
+#contact {
+    background: linear-gradient(to bottom, #f9fbff, #ffffff);
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.ContactSection {
+    background: #f7f9ff;
+}
+
+.ContactTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #1b2c58;
+}
+
+.ContactSubtitle {
+    color: #4d4d56;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.ContactInfo {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.ContactInfo h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.ContactInfo p {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 15px;
+}
+
+#contact input,
+#contact textarea {
+    border-radius: 10px;
+    border: 1px solid #cfd9e8;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#contact button {
+    border-radius: 10px;
+}
+
+.icon {
+    width: 35px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+.FooterSection {
+    background: linear-gradient(90deg, #0d1b4d, #1d4fa8, #6b7cff);
+    color: #fff;
+}
+
+.FooterLogo {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.FooterTagline {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.FooterSocial .footer-icon {
+    width: 35px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.FooterSocial .footer-icon:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+.FooterCopy {
+    font-size: 13px;
+    margin-top: 15px;
+    opacity: 0.8;
+}

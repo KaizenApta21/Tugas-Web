@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Latihan Bootstrap</title>
+
+  <link rel="stylesheet" href="Assets/Css/bootstrap.min.css">
+  <link rel="stylesheet" href="Assets/Css/Customstyle.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="Assets/Js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark Headerbg">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="Assets/Img/logomantab.png" alt="Logo">
+        Jalan-Jalanin
+
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active"><a class="nav-link" href="#carouselExampleCaptions">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Serviceclass">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Assets/Img/person-traveling-enjoying-their-vacation.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Welcome to Jalan-Jalanin</h5>
+          <p>Temukan destinasi terbaik dengan guide profesional.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Assets/Img/tourist-carrying-baggage.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Welcome to Jalan-Jalanin</h5>
+          <p>Temukan destinasi terbaik dengan guide profesional.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Assets/Img/yellow-kayak-resting-sandy-beach-with-water-nearby.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Welcome to Jalan-Jalanin</h5>
+          <p>Temukan destinasi terbaik dengan guide profesional.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </button>
+    </div>
+
+  </section>
+
+  <section id="Serviceclass" class="py-5">
+    <div class="container text-center">
+      <div>
+        <h1 class="Oit">Profile Tour Guide</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Dr. Albert E.</h2>
+          <img class="guide1" src="Assets/Img/guide1.jpg">
+          <p>Heritage & Science Explorer. Menggabungkan sejarah, geografi, dan perspektif ilmiah,
+            beliau membawa Anda memahami destinasi dari sudut pandang yang lebih dalam dan penuh makna.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Snoop Dogg</h2>
+          <img class="guide1" src="Assets/Img/guide2.jpg">
+          <p>Urban Culture Guide. Menyajikan tur santai dengan sentuhan musik,
+            budaya kota, dan suasana autentik yang membuat perjalanan terasa hidup.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h2>Mr. B. dan Teddy</h2>
+          <img class="guide1" src="Assets/Img/guide3.jpg">
+          <p>Mr. B & Teddy — Adventure Duo Guide. Tur penuh kejutan, aksi tak terduga,
+            dan momen seru yang membuat pengalaman Anda semakin berkesan.</p>
+        </div>
+      </div>
+  </section>
+
+  <section id="about" class="py-5 AboutSection">
+    <div class="container">
+      <div class="section-card">
+        <div class="row align-items-center">
+
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img src="Assets/Img/by.jpg" class="img-fluid rounded shadow" alt="About Us">
+          </div>
+
+          <div class="col-md-6">
+            <h2 class="AboutTitle">About Jalan-Jalanin</h2>
+            <p class="AboutDesc">
+              Jalan-Jalanin adalah platform perjalanan modern yang menghubungkan wisatawan
+              dengan guide lokal profesional di berbagai daerah. Kami percaya bahwa pengalaman
+              terbaik datang dari orang yang benar-benar mengenal tempat tersebut.
+            </p>
+
+            <p class="AboutDesc">
+              Dengan berbagai pilihan guide unik — mulai dari ahli sejarah, ikon musik,
+              hingga karakter paling lucu sekalipun — perjalanan Anda tidak hanya nyaman,
+              tetapi juga penuh cerita dan kenangan.
+            </p>
+
+            <ul class="AboutList">
+              <li>✔ Guide terpercaya dan bersertifikat</li>
+              <li>✔ Rekomendasi tempat wisata yang jarang diketahui</li>
+              <li>✔ Harga transparan dan fleksibel</li>
+              <li>✔ Pengalaman tur yang personal dan berbeda untuk setiap daerah</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 ContactSection">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="ContactTitle">Contact Us</h2>
+        <p class="ContactSubtitle">
+          Ada pertanyaan tentang tur atau ingin memesan guide? Hubungi kami kapan saja.
+        </p>
+      </div>
+
+      <div class="row">
+
+        <!-- LEFT : Kontak Info -->
+        <div class="col-md-5">
+          <div class="ContactInfo">
+            <h4>Informasi Kontak</h4>
+            <p><strong>Email:</strong> support@jalanjalanin.com</p>
+            <p><strong>Telepon:</strong> +62 000-000-000</p>
+            <p><strong>Alamat:</strong> Surakarta, Indonesia</p>
+
+            <div class="SocialIcons mt-3">
+              <a href="#"><img src="Assets/Img/contact2.png" class="icon"></a>
+              <a href="#"><img src="Assets/Img/contact.png" class="icon"></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT : Form -->
+        <div class="col-md-7">
+          <form>
+            <div class="form-group">
+              <label>Nama</label>
+              <input type="text" class="form-control" placeholder="Masukkan nama Anda">
+            </div>
+
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="Masukkan email Anda">
+            </div>
+
+            <div class="form-group">
+              <label>Pesan</label>
+              <textarea class="form-control" rows="4" placeholder="Pesan Anda..."></textarea>
+            </div>
+
+            <button class="btn btn-primary btn-block mt-3">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="footer">
+    <footer class="FooterSection py-4">
+      <div class="container-fluid text-center">
+
+        <h4 class="FooterLogo">Jalan-Jalanin</h4>
+        <p class="FooterTagline">
+          Teman terbaik untuk menjelajah dunia dengan cara yang lebih personal.
+        </p>
+
+        <div class="FooterSocial mb-3">
+          <a href="#about"><img src="Assets/Img/Pesawatremovebg-preview.png" class="footer-icon"></a>
+          <a href="#contact"><img src="Assets/Img/Wa-removebg-preview.png" class="footer-icon"></a>
+          <a href="#Serviceclass"><img src="Assets/Img/Person2.png" class="footer-icon"></a>
+        </div>
+
+        <p class="FooterCopy">
+          © 2025 Jalan-Jalanin. All Rights Reserved.
+        </p>
+
+      </div>
+    </footer>
+  </section>
+
+</body>
+
+</html>
