@@ -7,6 +7,16 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+body {
+    padding-top: 60px;
+
+}
+
+html {
+    scroll-padding-top: 90px;
+    /* sesuaikan dengan tinggi navbar kamu */
+}
+
 .navbar-brand {
     font-family: "Georgia", serif;
     font-size: 25px;
@@ -14,6 +24,18 @@
     letter-spacing: 1px;
     color: #fff !important;
     margin-left: 20px;
+}
+
+.navbar-brand-text {
+    font-family: "Cinzel", serif;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    color: #cce7ff;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow:
+        0 0 4px rgba(0, 50, 120, 0.6),
+        0 0 10px rgba(0, 120, 255, 0.4);
 }
 
 .logo {
@@ -50,6 +72,12 @@
 .carousel-item img {
     height: 600px;
     object-fit: cover;
+    transition: transform 0.6s ease, filter 0.6s ease !important;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05) !important;
+    filter: brightness(90%) !important;
 }
 
 /* Judul slide */
@@ -71,6 +99,25 @@
     filter: invert(100%);
 }
 
+/* Teks carousel versi mobile */
+@media (max-width: 576px) {
+    .carousel-caption h5 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .carousel-caption p {
+        font-size: 12px;
+        margin-top: -4px;
+    }
+
+    .carousel-caption {
+        bottom: 40px;
+
+    }
+}
+
+
 #Serviceclass {
     background: linear-gradient(to bottom, #e6f3ff, #ffffff);
     padding-top: 70px;
@@ -82,12 +129,36 @@
     font-size: 22px;
     font-weight: 600;
     margin-top: 20px;
+    color: #0f2c5c;
+    transition: 0.35s ease;
+}
+
+.col-md-4:hover h2 {
+    transform: translateY(-6px) scale(1.07);
+    color: #0066ff;
+    text-shadow: 0 0 12px rgba(0, 140, 255, 0.45);
+    transition: 0.3s ease;
+}
+
+.col-md-4:hover p {
+    color: #0049b7;
+    transform: translateY(-2px);
+    transition: 0.3s ease;
+}
+
+.col-md-4 {
+    transition: transform 0.3s ease;
+}
+
+.col-md-4:hover {
+    transform: translateY(-8px);
 }
 
 #Serviceclass p {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     opacity: 0.9;
+
 }
 
 .Oit {
@@ -97,12 +168,25 @@
     letter-spacing: 0.5px;
 }
 
+/* ANIMASI KOMBINASI (Zoom + Floating + Glow) */
 .guide1 {
     width: 180px;
     height: 180px;
     object-fit: cover;
     border-radius: 15px;
     margin-bottom: 15px;
+
+    /* Animasi halus */
+    transition: transform 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+.guide1:hover {
+    transform: scale(1.08) translateY(-6px);
+    /* Zoom + naik sedikit */
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25),
+        0 0 18px rgba(0, 140, 255, 0.45);
+    /* Glow biru lembut */
 }
 
 /* === Heading Style Global === */
@@ -127,12 +211,27 @@ h2 {
     background: #f8f9ff;
 }
 
+.AboutSection img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.AboutSection img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
 .AboutTitle {
     font-family: 'Poppins', sans-serif;
     font-size: 32px;
     font-weight: 600;
     color: #1b2c58;
     margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.AboutTitle:hover {
+    color: #0062ff;
+    transform: translateX(5px);
 }
 
 .AboutDesc {
@@ -154,6 +253,13 @@ h2 {
     font-size: 16px;
     margin-bottom: 8px;
     color: #2b3c6b;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.AboutList li:hover {
+    transform: translateX(8px);
+    color: #0062ff;
 }
 
 .section-card {
@@ -196,6 +302,12 @@ h2 {
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.ContactInfo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
 .ContactInfo h4 {
@@ -221,16 +333,48 @@ h2 {
     border-radius: 10px;
 }
 
-.icon {
-    width: 35px;
+.SocialIcons .icon {
+    width: 40px;
     margin-right: 10px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.icon:hover {
-    transform: scale(1.1);
+.SocialIcons .icon:hover {
+    transform: scale(1.2) rotate(8deg);
+    filter: brightness(1.2);
 }
 
+form {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Hover input */
+form .form-control {
+    transition: 0.3s ease;
+}
+
+form .form-control:hover {
+    border-color: #0f87e9;
+    box-shadow: 0 0 8px rgba(15, 135, 233, 0.3);
+}
+
+/* Tombol hover */
+form button {
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    transform: scale(1.05);
+}
 
 /* ================================
    FOOTER
