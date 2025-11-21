@@ -1,0 +1,790 @@
+/* ================================
+   HEADER (Travel Modern)
+===================================*/
+
+.Headerbg {
+    /* semi-transparent gradient + blur */
+    background: linear-gradient(90deg, rgba(122, 31, 13, 0.75), rgba(184, 42, 13, 0.75));
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+
+html {
+    scroll-padding-top: 90px;
+    /* sesuaikan dengan tinggi navbar kamu */
+}
+
+.navbar-brand {
+    font-family: "Georgia", serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff !important;
+    margin-left: 20px;
+}
+
+.navbar-brand-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    color: #f7e9d7;
+    font-weight: 600;
+    text-shadow:
+        0 0 4px rgba(0, 50, 120, 0.6),
+        0 0 10px rgba(0, 120, 255, 0.4);
+}
+
+.logo {
+    padding-bottom: 9px;
+    width: 40px;
+    height: auto;
+    display: inline-block;
+    margin-right: 10px;
+    scale: 140%;
+}
+
+/* Nav menu */
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 18px;
+    /* Ukuran menu diperbesar */
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+/* Reset visited/focus so clicked link tidak tetap berubah warna */
+.navbar-nav .nav-link,
+.navbar-nav .nav-link:link,
+.navbar-nav .nav-link:visited,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active {
+    color: inherit;
+    /* gunakan warna default nav */
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Hover style (tetap) */
+.navbar-nav .nav-link:hover {
+    color: #ffb856;
+    /* sesuaikan dengan warna hover yang kamu pakai */
+    transform: scale(1.05);
+}
+
+/* Hanya .active yang memberikan style aktif */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.active .nav-link {
+    color: #ffb856 !important;
+    transform: scale(1.05);
+    display: inline-block;
+    /* agar transform tidak memecah layout */
+    transition: color .18s ease, transform .18s ease;
+}
+
+/* optional: keep focus/keyboard visible same style */
+.navbar-nav .nav-link:focus {
+    transform: scale(1.05);
+}
+
+/* proximity (cursor near menu) */
+.navbar-nav .nav-link.prox {
+    color: #ffd08a !important;
+    /* warna saat dekat */
+    transform: scale(1.07);
+    text-shadow: 0 2px 8px rgba(255, 208, 138, 0.12);
+    transition: color .16s ease, transform .16s ease;
+}
+
+/* pastikan active tetap prioritas, tapi prox juga terlihat jika ingin */
+.navbar-nav .nav-link.active.prox {
+    /* jika active + prox, biarkan warna active (opsional) */
+    color: #ffb856 !important;
+}
+
+/* ================================
+   Carsoul  
+//* ============================
+HERO SECTION STYLE===========================*/
+#home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../Img/01Back.jpg');
+    /* <- diperbaiki */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter: brightness(95%);
+    z-index: -1;
+
+    /* Efek background mengikuti scroll */
+    transform: translateZ(0);
+    will-change: transform;
+
+    background-attachment: fixed;
+    pointer-events: none;
+}
+
+/* Card */
+.hero-card {
+    position: relative;
+    background: #f7e9d7;
+    /* warna krem lembut */
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Typography */
+.hero-small-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    letter-spacing: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.hero-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #222;
+    display: flex;
+    align-items: center;
+}
+
+.hero-line {
+    width: 6px;
+    height: 45px;
+    background: #7b2d1f;
+    /* merah coklat premium */
+    margin-right: 15px;
+}
+
+.cursor {
+    font-weight: 200;
+    color: #000;
+}
+
+/* Description */
+.hero-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Button */
+.hero-btn {
+    background: #8b2e1b;
+    color: white;
+    padding: 12px 26px;
+    font-size: 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #7a2515;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-line {
+        height: 34px;
+    }
+
+    .hero-card {
+        margin-top: 60px;
+    }
+}
+
+/* SECTION WRAPPER */
+.service-section {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* SLIDER BACKGROUND */
+.service-slider {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* default: pause animation until section is in-view */
+.service-slider .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: sliderFade 15s infinite;
+    animation-play-state: paused;
+    /* <-- default paused */
+}
+
+/* when section visible, run animation */
+.service-section.in-view .service-slider .slide {
+    animation-play-state: running;
+}
+
+.service-slider .slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.service-slider .slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.service-slider .slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+@keyframes sliderFade {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* DARK OVERLAY */
+.service-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+/* CONTENT */
+.content-box {
+    position: relative;
+    z-index: 2;
+    color: #7a1f0d;
+}
+
+/* RED TRANSPARENT CARD */
+.service-card {
+    background: rgba(150, 20, 20, 0.80);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+/* ITEMS */
+.service-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    color: #f7e9d7;
+}
+
+.service-item:last-child {
+    border-right: none;
+}
+
+.service-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ================================
+   ABOUT
+===================================*/
+
+/* LEFT SIDE */
+.about-left {
+    background-color: #7a1f0d;
+    /* merah bata */
+    color: #fff;
+    min-height: 100%;
+}
+
+.about-left-content {
+    max-width: 840px;
+    /* naikkan dari 500px ke nilai lebih besar */
+}
+
+.about-mini {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.about-title {
+    color: #f7e9d7;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.brand-sq {
+    text-decoration: underline;
+}
+
+/* RIGHT SIDE */
+
+.about-right {
+    background: #ffffff;
+    border-left: 1px solid #f0f0f0;
+}
+
+.feature-box h4 {
+    font-weight: 700;
+}
+
+.feature-box p {
+    font-size: 15px;
+    color: #444;
+}
+
+.feature-icon {
+    background-color: #fff4d1;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 22px;
+    color: #7a1f0d;
+}
+
+.about-link {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.about-link:hover {
+    color: #fce9d7;
+}
+
+/* PROJECTTTTTT */
+.project-title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: #c00000;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* CARD */
+.project-card {
+    text-align: left;
+    padding: 10px;
+}
+
+.project-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project-name {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.project-location {
+    color: #c00000;
+    font-weight: 600;
+    margin-top: -5px;
+}
+
+.project-desc {
+    font-size: 14px;
+    color: #444;
+}
+
+/* BUTTON */
+.learn-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 18px;
+    border: 2px solid #c00000;
+    color: #c00000;
+    font-weight: 600;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.learn-btn:hover {
+    background: #c00000;
+    color: #fff;
+}
+
+/* ================================
+  CONTACT
+===================================*/
+
+
+#contact {
+    background: linear-gradient(to bottom, #f9fbff, #ffffff);
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.ContactSection {
+    background: #f7f9ff;
+}
+
+.ContactTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #1b2c58;
+}
+
+.ContactSubtitle {
+    color: #4d4d56;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.ContactInfo {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.ContactInfo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.ContactInfo h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.ContactInfo p {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 15px;
+}
+
+#contact input,
+#contact textarea {
+    border-radius: 10px;
+    border: 1px solid #cfd9e8;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#contact button {
+    border-radius: 10px;
+}
+
+.SocialIcons .icon {
+    width: 40px;
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+
+.SocialIcons .icon:hover {
+    transform: scale(1.2) rotate(8deg);
+    filter: brightness(1.2);
+}
+
+form {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Hover input */
+form .form-control {
+    transition: 0.3s ease;
+}
+
+form .form-control:hover {
+    border-color: #0f87e9;
+    box-shadow: 0 0 8px rgba(15, 135, 233, 0.3);
+}
+
+/* Tombol hover */
+form button {
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    transform: scale(1.05);
+}
+
+/* ================================
+   FOOTER
+================================ */
+.FooterSection {
+    background-color: #7a1f0d;
+    color: #fff;
+}
+
+.FooterLogo {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.FooterTagline {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.FooterSocial .footer-icon {
+    width: 35px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.FooterSocial .footer-icon:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+.FooterCopy {
+    font-size: 13px;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+/* ================================
+   ABOUT
+===================================*/
+
+/* LEFT SIDE */
+.about-left {
+    background-color: #7a1f0d;
+    /* merah bata */
+    color: #fff;
+    min-height: 100%;
+}
+
+.about-left-content {
+    max-width: 840px;
+    /* naikkan dari 500px ke nilai lebih besar */
+}
+
+.about-mini {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.about-title {
+    color: #f7e9d7;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.brand-sq {
+    text-decoration: underline;
+}
+
+/* RIGHT SIDE */
+
+.about-right {
+    background: #ffffff;
+    border-left: 1px solid #f0f0f0;
+}
+
+.feature-box h4 {
+    font-weight: 700;
+}
+
+.feature-box p {
+    font-size: 15px;
+    color: #444;
+}
+
+.feature-icon {
+    background-color: #fff4d1;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 22px;
+    color: #7a1f0d;
+}
+
+.about-link {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.about-link:hover {
+    color: #fce9d7;
+}
+
+/* ABOUT CONTENT LAYOUT */
+.about-content-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    /* kurangi/naikkan gap sesuai tata letak */
+    margin-left: 40px;
+    /* <-- geser keseluruhan blok ke kanan, ubah 40px jika perlu */
+}
+
+/* Jika mau hanya teks + chart bergeser tanpa memindahkan seluruh kolom, gunakan padding pada internal container */
+.about-left .about-left-content {
+    padding-left: 24px;
+    /* alternatif/penyesuaian tambahan */
+}
+
+/* sedikit penyesuaian vertikal/posisi chart bila perlu */
+.about-chart-block {
+    flex: 0 0 240px;
+    /* chart jadi kolom tetap lebih kecil */
+    width: 240px;
+    height: 240px;
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    transform: translateX(6px);
+    /* haluskan sedikit pergeseran chart relatif ke teks */
+}
+
+.about-chart-block canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* responsive: stack on small screens */
+@media (max-width: 768px) {
+    .about-content-inner {
+        flex-direction: column;
+        gap: 18px;
+        margin-left: 0;
+    }
+
+    .about-text-block {
+        max-width: 100%;
+        flex: none;
+    }
+
+    .about-chart-block {
+        width: 180px;
+        height: 180px;
+        margin-left: 0;
+        align-self: center;
+    }
+}
+
+:root {
+    --chart-color-1: #AA4A3A;
+    /* Minimalis */
+    --chart-color-2: #d19200;
+    /* Modern */
+    --chart-color-3: #6B3D2B;
+    /* Scandi */
+    --chart-color-4: #C4A895;
+    /* Classic */
+    --chart-border: #f7e9d7;
+}
+
+/* legend small color square (jika pakai .chart-legend markup) */
+.chart-legend i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    vertical-align: middle;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px var(--chart-border) inset;
+}
+
+/* Map responsive */
+.map-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 420px;
+    /* ubah tinggi sesuai kebutuhan */
+    border: 0;
+    display: block;
+}
+
+/* responsive: kurangi tinggi di layar kecil */
+@media (max-width: 768px) {
+    .map-wrapper iframe {
+        height: 260px;
+    }
+}
