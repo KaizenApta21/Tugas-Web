@@ -34,7 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 } else {
     // Jika file ini diakses langsung tanpa lewat form, kembalikan ke halaman utama
-    header("Location: LatJs.php");
+    header("Location: Index.php");
     exit();
 }
+
 ?>
